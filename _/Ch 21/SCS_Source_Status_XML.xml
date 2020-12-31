@@ -1,0 +1,30 @@
+<?xml version="1.0" ?> 
+<state product-version="5.2.5.204 SP2">
+  <uptime>
+	  <hours>26</hours> 
+	  <minutes>59</minutes> 
+	  <seconds>39</seconds> 
+	  <milliseconds>903</milliseconds> 
+  </uptime>
+  <total-publishes>
+	<count>1</count> 
+  </total-publishes>
+  <full-refreshes>
+	  <count>1</count> 
+	  <average-duration>
+		  <hours>0</hours> 
+		  <minutes>0</minutes> 
+		  <seconds>0</seconds> 
+		  <milliseconds>0</milliseconds> 
+	  </average-duration>
+  </full-refreshes>
+  <incrementals>
+	<count>0</count> 
+  </incrementals>
+  <asynchronous-publishes>
+	<count>0</count> 
+  </asynchronous-publishes>
+  <active-publishes>
+	<count>0</count> 
+  </active-publishes>
+</state>

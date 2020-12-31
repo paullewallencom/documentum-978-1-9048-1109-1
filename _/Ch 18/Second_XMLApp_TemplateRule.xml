@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <tagcontent tag_name="BOOKNAME">
+    <textline charlength="100" instruction="Please provide the name of the book" label="Book Name">
+    </textline>
+  </tagcontent>
+
+  <tagcontent tag_name="AUTHORNAME">
+    <textline charlength="100" instruction="Please provide the name of the author" label="Author Name">
+    </textline>
+  </tagcontent>
+
+  <repeatdef instruction="Provide as many values as you want" label="repeating block for books and authors" tag_list="REPEATBLOCK">
+  </repeatdef>
+</rules>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application  SYSTEM "config_5.2.dtd">
+<application>
+	<name>FirstXMLApp</name>
+	<app_pattern>
+		<element>ROOTTAG</element>			<!-- Specifying the XML Root element-->
+	</app_pattern>
+
+	<map_rules>
+		<xml_content_rule>
+			<element_selection_pattern>
+				<element>ROOTTAG</element>	
+			</element_selection_pattern>			
+
+			<variables>					<!-- Defining variables to map values in object attribute-->
+			<variable>
+					<name>TitleOfPage</name>		<!-- Storing the value of TITLEOFPAGE template element -->
+					<content_of_element>
+						<element_selection_pattern>
+							<element>TITLEOFPAGE</element>
+						</element_selection_pattern>
+					</content_of_element>
+				</variable>
+				<variable>
+					<name>ShortDescOfPage</name>		<!-- Storing the value of SHORTDESC template element -->
+					<content_of_element>
+						<element_selection_pattern>
+							<element>SHORTDESC</element>
+						</element_selection_pattern>
+					</content_of_element>
+				</variable>
+			</variables>
+			<object_type>dm_document</object_type>   <!-- Specifying the object type-->
+			<metadata>
+				<dctmattr>
+					<name>title</name>					<!-- Saving value in title attribute-->
+					<template><var name="TitleOfPage"/></template>
+				</dctmattr>
+				<dctmattr>
+					<name>subject</name>				<!-- Saving value in subject attribute-->
+					<template><var name="ShortDescOfPage"/></template>
+				</dctmattr>
+								
+			</metadata>
+			
+			<make_entity/>
+		</xml_content_rule>
+	</map_rules>
+	
+</application>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1" standalone="no"?>
+
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Component xml file for New Navigation Link Component                  -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- File           custom_news_article_component.xml                      -->
+<!-- Author         Gaurav Kathuria                                        -->
+<!-- Description    New News Article Component                             -->
+<!--                allows creating new news article                       -->
+<!--                and properties file.                                   -->
+<!-- Created on     Nov 28, 2005                                           -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version='1.0'>
+    <scope>
+	
+	<component id="new_news_article">
+	    <desc>
+		   New News Article Component: Provides UI for creating new news articles
+       </desc>
+        <!-- Component Contract -->
+		<params>
+	        <param name="objectId" required="true"></param>
+            <param name="folderPath" required="true"></param>
+	    </params>
+
+		<!-- Component Layout -->
+        <pages>
+            <start>/custom/library/newsarticle/custom_newnewsarticle.jsp</start>
+		</pages>
+
+		<!-- Component Behaviour -->
+        <class>com.newsarticle.content.NewNewsArticle</class>
+
+		<!-- NLS properties file -->
+        <nlsbundle>com.newsarticle.content.NewNewsArticleNlsProp</nlsbundle>
+
+    </component>
+    </scope>
+</config>
+

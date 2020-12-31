@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--***********************************************************************-->
+
+
+<config version='1.0'>
+
+   <scope wpcontext="wpview">
+
+      <!-- the document list component definition -->
+      <!--<component id="newcontent">-->
+	  <component id="newcontent" 
+	  extends="newcontent:wp/config/library/newcontent/newcontent_component.xml">
+
+         <!-- Component Contract -->
+         <params>
+            <param name="objectId" required="false"/>
+         </params>
+
+         <!-- Component Layout -->
+         <pages>
+            <!--<start>/wp/library/newcontent/newContent.jsp</start>-->
+			<start>/custom/library/newcontent/custom_newContent.jsp</start>
+            <return>/wp/library/componentReturn.jsp</return>
+         </pages>
+
+         <!-- Component Behavior -->
+         <class>com.documentum.wp.library.newcontent.NewContent</class>
+         <nlsbundle>com.documentum.wp.library.newcontent.NewContentNlsProp</nlsbundle>
+
+         <!-- Component specific Configuration -->
+
+         <!-- Allow the user to import a file from file system. Default is true. -->
+         <allow_import>true</allow_import>
+
+         <enable_full_text_index>true</enable_full_text_index>
+
+         <!-- Component specific Configuration -->
+         <helpcontextid>newcontent</helpcontextid>
+      </component>
+
+   </scope>
+</config>
+

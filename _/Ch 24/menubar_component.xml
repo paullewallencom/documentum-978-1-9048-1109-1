@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Component xml file for menubar Component                              -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- File           menubar_component.xml                                  -->
+<!-- Author         Gaurav Kathuria                                        -->
+<!-- Description    Extends the menubar component to display the           -->
+<!--                the new custom menu option                             -->
+<!-- Created on     Nov 28, 2005                                           -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version='1.0'>
+   <scope>
+      <desc>
+			menubar component : Extends the menubar component to display the
+			 new custom menu option
+      </desc>
+	  <!-- Component Contract -->
+	  <!--<component id="menubar" extends="menubar:webtop/config/menubar_component.xml">-->
+      <component id="menubar" extends="menubar:wp/config/app/menubar_component.xml">
+
+		<!-- Component Layout -->     
+         <pages>
+            <start>/custom/app/custom_menubar.jsp</start>
+         </pages>
+         
+		 <!-- NLS properties file -->
+         <nlsbundle>com.newsarticle.app.WpMenuBarNlsProp</nlsbundle>
+      </component>
+      
+   </scope>
+</config>
+

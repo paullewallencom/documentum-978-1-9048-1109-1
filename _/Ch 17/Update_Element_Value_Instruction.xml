@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<instructions xmlns ="http://www.documentum.com/wp" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.documentum.com/wp instructions.xsd"> 
+<update-element-value>
+<path>/PRODUCTINFO</path>
+<nodename>PRICEINFO</nodename>
+<value>Price Not available</value>
+<comments>Updating the value of PRICEINFO element</comments>
+</update-element-value>
+</instructions>

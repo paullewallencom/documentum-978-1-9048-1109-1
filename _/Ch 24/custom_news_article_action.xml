@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- Action xml file for creating new news article Action                  -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+<!--                                                                       -->
+<!-- File           custom_news_article_action.xml                         -->
+<!-- Author         Gaurav Kathuria                                        -->
+<!-- Description    This Action launches custom new news                   -->
+<!--                article creation screen  -->
+<!--                                                                       -->
+<!-- Created on     Nov 28, 2005                                           -->
+<!--                                                                       -->
+<!--***********************************************************************-->
+
+<config version='1.0'>
+    <scope>
+	<action id="newnewsarticlelink">
+		<desc>
+                New news article Action : Check the condition to create 
+				the news article Link 
+        </desc>
+	    <!-- Component Contract -->
+	    <params>
+	        <param name="objectId" required="true"></param>
+            <param name="folderPath" required="true"></param>
+	    </params>
+
+		<!-- Precondition class -->
+        <preconditions>
+            <precondition class="com.documentum.web.formext.action.RolePrecondition">
+                <role>administrator</role>
+            </precondition>
+        </preconditions>
+        
+		<!-- Component Name -->
+	    <execution class="com.documentum.web.formext.action.LaunchComponent">
+	    	<arguments>
+	    	    <argument name="component" value="new_news_article"></argument>
+	    	</arguments>
+		<container>dialogcontainer</container>
+	    </execution>
+	</action>
+    </scope>
+</config>
+

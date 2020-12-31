@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application  SYSTEM "config_5.2.dtd">
+<application>
+	<name>SecondXMLApp</name>
+	<app_pattern>
+		<element>BOOK</element>			<!-- Specifying the XML Root element BOOK-->
+	</app_pattern>
+
+	<map_rules>
+		<xml_content_rule>
+			<element_selection_pattern>
+				<element>BOOK</element>	
+			</element_selection_pattern>			
+
+			<variables>					<!-- Defining variable to map values in object attribute authors-->
+				<variable>
+						<name>authorName</name>		<!--Getting the value of AUTHORNAME template element -->
+						<content_of_element>
+							<element_selection_pattern>
+								<element>AUTHORNAME</element>
+							</element_selection_pattern>
+						</content_of_element>
+				</variable>
+			</variables>
+			<object_type>dm_document</object_type>   <!-- Specifying the object type -->
+			<metadata>
+				<dctmattr_repeating>
+					<name>authors</name>	<!-- Saving value in authors repeating attribute-->
+					<template><var name="authorName"/></template>
+				</dctmattr_repeating>
+												
+			</metadata>
+			
+			<make_entity/>
+		</xml_content_rule>
+	</map_rules>
+	
+</application>

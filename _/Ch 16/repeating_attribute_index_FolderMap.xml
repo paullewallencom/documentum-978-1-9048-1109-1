@@ -1,0 +1,24 @@
+<folder_map>
+	<rule>
+		<attr_list>
+			<attr>
+				<name>keywords[1]</name>
+				<value>hello</value>
+			</attr>
+		</attr_list>
+		<path_list>
+			<path>/Test_WebCabinet/Keywords_Hello</path>
+		</path_list>
+	</rule>
+	<rule>
+		<attr_list>
+			<attr>
+				<name></name>
+				<value></value>
+			</attr>
+		</attr_list>
+		<path_list>
+			<path></path>
+		</path_list>
+	</rule>	
+</folder_map>

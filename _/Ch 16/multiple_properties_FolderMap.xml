@@ -1,0 +1,28 @@
+<folder_map>
+	<rule>
+		<attr_list>
+			<attr>
+				<name>object_name</name>
+				<value>*</value>
+			</attr>
+			<attr>
+				<name>subject</name>
+				<value>office</value>
+			</attr>
+		</attr_list>
+		<path_list>
+			<path>/Test_WebCabinet/Official docs</path>
+		</path_list>
+	</rule>
+	<rule>
+		<attr_list>
+			<attr>
+				<name></name>
+				<value></value>
+			</attr>
+		</attr_list>
+		<path_list>
+			<path></path>
+		</path_list>
+	</rule>	
+</folder_map>

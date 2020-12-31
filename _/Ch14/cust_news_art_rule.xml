@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <tagcontent tag_name="BANNERIMG">
+    <graphic enable_locale_fallback="N" import="Y" instruction="Please choose a banner image" label="Banner Image:" lifecycle="Default Lifecycle" location="/Test_WebCabinet/Custom_Images" output_property="folderPath" property="object_name" query="dm_document where folder(&#39;/Test_WebCabinet/Custom_Images&#39;)" query_type="query" required="Y" type="dm_document">
+    </graphic>
+  </tagcontent>
+
+  <tagcontent tag_name="IMGALTTEXT">
+    <textline charlength="150" instruction="Please provide an alternative text for banner image" label="Banner Image alt text:" maxlength="50">
+    </textline>
+  </tagcontent>
+
+  <tagcontent tag_name="DATE">
+    <textline charlength="100" default="TODAY+0,MMM dd, yyyy" instruction="Please provide a date for the news article" label="News date:" maxlength="50">
+    </textline>
+  </tagcontent>
+
+  <tagcontent tag_name="BODYTEXT">
+    <content activeOnly="Y" align="Y" bold="Y" color="Y" copy="Y" cut="Y" enable_locale_fallback="N" fontSize="Y" formats="html,crtext,xml" htmlTextEdit="Y" indent="Y" instruction="Please provide the complete news article content" italic="Y" label="Main news content:" lines="5" links="Y" orderedLists="Y" paste="Y" pasteHTML="Y" required="Y" spellcheck="Y" symbols="Y" table="Y" unorderedLists="Y">
+    </content>
+  </tagcontent>
+
+  <repeatdef instruction="Add as many article links as you want" label="Next article links" tag_list="REPEATBLOCK">
+  </repeatdef>
+
+  <tagcontent tag_name="NEXTLINKNAME">
+    <textline charlength="150" instruction="Please provide a name for a related article" label="Next article link name:" maxlength="50">
+    </textline>
+  </tagcontent>
+
+  <tagcontent tag_name="NEXTLINKURL">
+    <textline charlength="150" instruction="Please provide a URL for a related article" label="Next article URL:" maxlength="70">
+    </textline>
+  </tagcontent>
+</rules>

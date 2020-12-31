@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE application  SYSTEM "config_5.2.dtd">
+<application>
+	<name>TwoWayXMLApp</name>
+	<app_pattern>
+		<element>INFORMATION</element>			<!-- Specifying the XML Root element INFORMATION -->
+	</app_pattern>
+
+	<map_rules>
+		<xml_content_rule>
+			<element_selection_pattern>
+				<element>INFORMATION</element>	
+			</element_selection_pattern>			
+
+			<variables>					<!-- Defining variable to map values in object attribute subject -->
+				<variable>
+						<name>subjectValue</name>		<!--Getting the value of SUBJECT template element -->
+						<content_of_element>
+							<element_selection_pattern>
+								<element>SUBJECT</element>
+							</element_selection_pattern>
+						</content_of_element>
+				</variable>
+			</variables>
+			<object_type>dm_document</object_type>   <!-- Specifying the object type -->
+			<metadata>
+				<two_way_dctmattr>
+					<name>subject</name>	<!-- Saving value in subject attribute-->
+					<var name="subjectValue"/>
+				</two_way_dctmattr>
+												
+			</metadata>
+			
+			<make_entity/>
+		</xml_content_rule>
+	</map_rules>
+	
+</application>
+
+

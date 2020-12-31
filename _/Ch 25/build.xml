@@ -1,0 +1,53 @@
+<!-- Build file Testing Purposes -->
+<project name="BuildDCTMCode" default="all_targets">
+
+    <!-- Machine specific settings -->
+    <property file="build.properties"/>
+
+    <!-- Source paths-->
+    <property name="base_loc_java" value="${base_loc}/src"/>
+
+    <!-- Destination paths-->
+    <property name="build_class" value="${build_dir}/Compiled"/>
+    
+    <!-- Classpaths-->
+    <property name="dfcbase_jar" value="${documentum_jar_location}\dfcbase.jar"/>
+    <property name="dfc_jar" value="${documentum_jar_location}\dfc.jar"/>
+
+    <path id="totalClassPath">
+        <pathelement location="${dfcbase_jar}"/>
+		<pathelement location="${dfc_jar}"/>
+    </path>
+
+ <target name="all_targets" depends="init, compile_code, copyFolders, createZip"/>
+
+    <target name="init">
+		<echo message = "Starting init" />
+			<mkdir dir="${build_dir}"/>
+			<mkdir dir="${build_class}"/>
+		<echo message = "Finishing init" />
+      </target>
+
+    <target name="compile_code" depends="init">
+		<echo message = "Starting to compile code" />
+			<javac srcdir="${base_loc_java}" destdir="${build_class}">
+				<classpath refid="totalClassPath"/>
+			</javac>
+		<echo message = "Finishing compilation of code" />
+    </target>
+
+    <target name="copyFolders" depends="compile_code">
+		<echo message = "Starting to copy Folders" />
+			<copy todir="${build_dir}/Compiled_Code" overwrite="yes">
+				<fileset dir="${build_class}"/>
+			</copy>
+       <echo message = "Finishing copy Folders" />
+    </target>
+
+	  <target name="createZip" depends="compile_code">
+		<echo message = "Starting to create Zip" />
+			<zip basedir="${build_class}" destfile="${zip_file_loc}/${compiled_zip_file_name}"/>
+		<echo message = "Finishing creatation of Zip" />
+    </target>
+
+</project>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <tagcontent tag_name="SUBJECT">
+    <textline charlength="150" instruction="Enter a subject here" label="Subject:">
+    </textline>
+  </tagcontent>
+</rules>

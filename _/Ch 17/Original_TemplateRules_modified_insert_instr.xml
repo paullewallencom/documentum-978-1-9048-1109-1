@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules>
+  <tagcontent tag_name="NAME">
+    <textline instruction="Please enter a name" label="Product name:" required="Y">
+    </textline>
+  </tagcontent>
+
+  <tagcontent tag_name="SHORTDESC">
+    <content instruction="please provide a short description for product" label="Product Description:" lines="5">
+    </content>
+  </tagcontent>
+
+  <tagcontent tag_name="COST">
+    <textline instruction="Please enter cost in dollars" label="Cost:">
+    </textline>
+  </tagcontent>
+
+  <tagcontent tag_name="PRODUCTTYPE">
+    <choice instruction="Please choose a type" label="Product Type:" values="Type A,Type B,Type C">
+    </choice>
+  </tagcontent>
+
+  <tagcontent tag_name="PRICEINFO">
+    <textline charlength="50" instruction="Please enter a price for the product" label="Enter price:">
+    </textline>
+  </tagcontent>
+</rules>

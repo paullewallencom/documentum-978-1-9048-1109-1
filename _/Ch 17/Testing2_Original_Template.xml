@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PRODUCTINFO>
+	<NAME>Prod B</NAME>
+	<SHORTDESC>
+<p>
+This is of type B
+</p>
+</SHORTDESC>
+	<COST>$ 175</COST>
+	<PRODUCTTYPE>Type B</PRODUCTTYPE>
+</PRODUCTINFO>
